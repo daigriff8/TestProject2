@@ -30,21 +30,33 @@ namespace TestProject2
 
             //if ID is visible
             //{click on the button}
-            
-            IWebElement isTAndCsPagePresent = driver.FindElement(By.Id("L2AGLb"));
 
-            isTAndCsPagePresent.Click;
+            if (IWebElement isTAndCsPagePresent = driver.FindElement(By.Id("L2AGLb"));
 
-            //else {do the below code or IF NOT visible do the same code}
-            IWebElement searchText = driver.FindElement(By.CssSelector("[name = 'q']"));
+            { isTAndCsPagePresent.Click; }
 
-            searchText.SendKeys("LambdaTest");
-            searchText.SendKeys(Keys.Enter);
+            else if
+            //{do the below code or IF NOT visible do the same code}
+            { IWebElement searchText = driver.FindElement(By.CssSelector("[name = 'q']"));
 
-            System.Threading.Thread.Sleep(2000);
+                searchText.SendKeys("LambdaTest");
+                searchText.SendKeys(Keys.Enter);
 
-            Console.WriteLine("the Test passed");
+                System.Threading.Thread.Sleep(2000);
 
+                Console.WriteLine("the Test passed");
+
+            }
+            else
+            {
+                IWebElement searchText = driver.FindElement(By.CssSelector("[name = 'q']"));
+
+                searchText.SendKeys("LambdaTest");
+                searchText.SendKeys(Keys.Enter);
+
+                System.Threading.Thread.Sleep(2000);
+
+                Console.WriteLine("the Test passed");
             }
 
         [TearDown]
